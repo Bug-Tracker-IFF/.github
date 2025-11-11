@@ -36,26 +36,6 @@ O sistema busca centralizar o fluxo de comunicação entre **Desenvolvedores**, 
 
 ---
 
-## ⚙️ Requisitos Funcionais (RFs)
-
-| Código | Descrição |
-|--------|------------|
-| **RF-01** | O Gerente cria Projetos e adiciona Membros (relação ManyToMany). |
-| **RF-02** | Qualquer Membro pode criar um Chamado (Bug) e anexar arquivos (logs, screenshots). |
-| **RF-03** | O Gerente pode atribuir o Chamado a um Desenvolvedor. |
-| **RF-04** | O Chamado deve transitar por status: `ABERTO` → `EM_ANDAMENTO` → `RESOLVIDO` → `FECHADO`. |
-
----
-
-## 🧠 Requisitos Não Funcionais (RNFs)
-
-| Código | Descrição |
-|--------|------------|
-| **RNF-01** | **Integridade/Robustez:** A transição de status do Chamado deve ser controlada por uma **Máquina de Estado rigorosa**. *(Desafio C3)* |
-| **RNF-02** | **Armazenamento:** O backend deve permitir **upload de arquivos** de log (.txt) e **imagens** (screenshots). *(Desafio C6)* |
-
----
-
 ## 🏗️ Arquitetura do Sistema
 
 O sistema será dividido em duas camadas principais:
@@ -68,24 +48,6 @@ O sistema será dividido em duas camadas principais:
 2. **Frontend (Interface Web)**  
    - Interface responsiva para interação dos usuários.  
    - Exibição de projetos, chamados e comentários.  
-   - Framework sugerido: **React / Vue / Angular**.
-
----
-
-## 🧾 Estrutura de Dados (Resumo)
-
-**Entidades principais:**
-- `Usuario`
-- `Projeto`
-- `Chamado`
-- `Comentario`
-- `Anexo`
-
-**Relacionamentos:**
-- `Usuario` ↔️ `Projeto` → ManyToMany  
-- `Projeto` ↔️ `Chamado` → OneToMany  
-- `Chamado` ↔️ `Comentario` → OneToMany  
-- `Chamado` ↔️ `Anexo` → OneToMany  
 
 ---
 
@@ -98,34 +60,9 @@ O sistema será dividido em duas camadas principais:
 
 ---
 
-## 🧑‍💻 Execução Local (Exemplo de Setup)
-
-```bash
-# Clonar o repositório
-git clone https://github.com/<sua-organizacao>/bug-tracker.git
-
-# Entrar na pasta do projeto
-cd bug-tracker
-
-# Instalar dependências
-npm install    # ou pip install -r requirements.txt
-
-# Executar o servidor
-npm start      # ou flask run
-```
-
----
-
 ## 🏁 Status do Projeto
 📌 Em desenvolvimento
-📅 Versão inicial planejada para: [entrega do trabalho]
-
----
-
-## 📄 Licença
-
-Este projeto é de uso acadêmico e está licenciado sob a MIT License.
-Sinta-se livre para reutilizar e adaptar para fins educacionais.
+📅 Versão inicial planejada para: A definir
 
 ---
 
